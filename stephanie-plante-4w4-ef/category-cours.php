@@ -44,6 +44,8 @@ get_header();
 			<?php endif ?>	
 			<?php if (in_array($tPropriété['session'], ['1', '2', '3','4','5','6']) ) : 
 					get_template_part( 'template-parts/content', 'cours' ); 
+					elseif (in_array($tPropriété['sigle'], ['582-4MB', '582-5JA', '582-5JB','582-5MB']) ):
+						get_template_part( 'template-parts/content', 'cours-sigle' );  
 			endif;	
 			$precedent = $tPropriété['session'];
 			endwhile;?>

@@ -1,0 +1,65 @@
+.coursSession{
+    display: flex;
+    flex-direction: column;
+    justify-items: space-evenly;
+
+    h1{
+        color: blue;
+    }
+    .Session{
+        display: flex;
+        flex-direction: row;
+        justify-items: space-evenly;
+        margin-left: 5rem;
+
+    }
+
+    .coursSigle{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: double 3px black;
+        background-color: blue;
+        width: 10vh;
+        .cours_Sigle{
+           display: flex;
+           justify-content: center;
+           p{
+               display: none;
+           }
+           h2{
+               display: none;
+           }
+           a{
+            writing-mode: vertical-lr;
+           
+           }
+        }
+    }
+}
+
+@include desktop{
+
+    .coursSession{
+
+        .coursSigle{
+            
+            width: 45vh;
+
+            .cours_sigle{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                p{
+                    display: block;
+                }
+                a{
+                 writing-mode: horizontal-tb;
+                
+                }
+             }
+            
+        }
+}
+}
