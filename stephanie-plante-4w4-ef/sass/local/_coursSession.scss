@@ -4,23 +4,29 @@
     justify-items: space-evenly;
 
     h1{
-        color: blue;
+        color: rgb(195, 159, 228);
     }
     .Session{
         display: flex;
         flex-direction: row;
         justify-items: space-evenly;
-        margin-left: 5rem;
+        margin-right: 2rem;
+        
 
     }
 
     .cours{
+        
         display: flex;
         flex-direction: column;
         justify-content: center;
         border: double 3px black;
-        width: 10vh;
+        border-radius: 10%;
+        background-color: rgb(221, 207, 238);
+        height: 20vh;
+        width: 20vh;
         .cours_session{
+           
            display: flex;
            justify-content: center;
            p{
@@ -36,7 +42,9 @@
         }
     }
 }
-
+.cours:hover{
+      background-color: rgb(239, 234, 243);  
+}
 @include desktop{
 
     .coursSession{
@@ -55,6 +63,7 @@
                 }
                 a{
                  writing-mode: horizontal-tb;
+                 text-decoration: none;
                 
                 }
              }

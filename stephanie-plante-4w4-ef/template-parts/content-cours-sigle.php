@@ -12,7 +12,7 @@ global $tPropriété;
 	
 				<div class="cours_Sigle">
 				<h2><?php echo $tPropriété['session'] ; ?></h2>
-					<p><?php echo $tPropriété['typeCours'] ; ?></p>
+					<a><?php echo $tPropriété['typeCours'] ; ?></a>
 					<a href="<?php echo get_permalink() ?>"><?php echo $tPropriété['sigle']; ?></a>
                     <p><?php echo $tPropriété['nbHeure'] ; ?></p>
 				</div>
