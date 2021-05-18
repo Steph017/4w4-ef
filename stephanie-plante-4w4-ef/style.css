@@ -1199,7 +1199,7 @@ body.home::after {
   body.home::after {
     -webkit-clip-path: polygon(90% 0, 100% 0, 100% 100%, 80% 100%);
             clip-path: polygon(90% 0, 100% 0, 100% 100%, 80% 100%);
-    background-color: #4475ad;
+    background-color: #ddcbee;
   }
 }
 
