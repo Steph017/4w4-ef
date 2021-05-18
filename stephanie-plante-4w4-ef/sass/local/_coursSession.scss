@@ -1,17 +1,59 @@
 .coursSession{
 
-    display : flex;
+    display : grid;
+    grid-template-areas: 40px 50px auto ;
     flex-wrap: wrap;
     justify-content: space-around;
 
+    
+
     .cours{
         border: double 3px black;
-        width: 45vh;
+        width: 15vh;
         .cours_session{
            display: flex;
            flex-direction: column;
            justify-content: center;
            align-items: center;
+           p{
+               display: none;
+           }
+           h2{
+               display: none;
+           }
+           a{
+            writing-mode: vertical-lr;
+           
+           }
         }
     }
+}
+
+@include desktop{
+
+    .coursSession{
+
+        .cours{
+            
+            width: 45vh;
+
+            .cours_session{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                p{
+                    display: block;
+                }
+                h2{
+                    display: none;
+                }
+                a{
+                 writing-mode: horizontal-tb;
+                
+                }
+             }
+            
+        }
+}
 }

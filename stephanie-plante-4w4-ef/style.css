@@ -1822,9 +1822,9 @@ La barre du millieu
 /* local cours
 --------------------------------------------- */
 .coursSession {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 40px 50px auto;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
@@ -1833,7 +1833,7 @@ La barre du millieu
 
 .coursSession .cours {
   border: double 3px black;
-  width: 45vh;
+  width: 15vh;
 }
 
 .coursSession .cours .cours_session {
@@ -1850,5 +1850,51 @@ La barre du millieu
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.coursSession .cours .cours_session p {
+  display: none;
+}
+
+.coursSession .cours .cours_session h2 {
+  display: none;
+}
+
+.coursSession .cours .cours_session a {
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+}
+
+@media (min-width: 1200px) {
+  .coursSession .cours {
+    width: 45vh;
+  }
+  .coursSession .cours .cours_session {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .coursSession .cours .cours_session p {
+    display: block;
+  }
+  .coursSession .cours .cours_session h2 {
+    display: none;
+  }
+  .coursSession .cours .cours_session a {
+    -webkit-writing-mode: horizontal-tb;
+        -ms-writing-mode: lr-tb;
+            writing-mode: horizontal-tb;
+  }
 }
 /*# sourceMappingURL=style.css.map */
