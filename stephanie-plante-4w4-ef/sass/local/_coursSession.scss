@@ -1,20 +1,28 @@
 .coursSession{
+    display: flex;
+    flex-direction: column;
+    justify-items: space-evenly;
 
-    display : grid;
-    grid-template-areas: 40px 50px auto ;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    h1{
+        color: blue;
+    }
+    .Session{
+        display: flex;
+        flex-direction: row;
+        justify-items: space-evenly;
+        margin-left: 5rem;
 
-    
+    }
 
     .cours{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         border: double 3px black;
-        width: 15vh;
+        width: 10vh;
         .cours_session{
            display: flex;
-           flex-direction: column;
            justify-content: center;
-           align-items: center;
            p{
                display: none;
            }
@@ -44,9 +52,6 @@
                 align-items: center;
                 p{
                     display: block;
-                }
-                h2{
-                    display: none;
                 }
                 a{
                  writing-mode: horizontal-tb;

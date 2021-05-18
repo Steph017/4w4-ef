@@ -30,10 +30,22 @@ get_header();
 				the_post();
                 convertirTableau($tPropriété);
 				//print_r($tPropriété);
-			if (in_array($tPropriété['session'], ['1', '2', '3','4','5','6']) ) : 
+				if ($tPropriété['session'] != $precedent): 
+					if ("XXXXXX" != $precedent)	: ?>
+					</section>
+					<?php if (in_array($precedent, ['1', '2', '3','4','5','6'])) : ?>
+							<section>
+								
+							</section>
+					<?php endif; ?>
+				<?php endif; ?>
+				<h1><?php echo $tPropriété['session'] ?></h1>
+				<section class="Session" <?php echo class_composant($tPropriété['session']) ?>>
+			<?php endif ?>	
+			<?php if (in_array($tPropriété['session'], ['1', '2', '3','4','5','6']) ) : 
 					get_template_part( 'template-parts/content', 'cours' ); 
 			endif;	
-			
+			$precedent = $tPropriété['session'];
 			endwhile;?>
 				
 				
