@@ -20,7 +20,8 @@ get_header();
 				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
-			<section class="cours">
+
+			<section class="coursSession">
 			<?php
 			/* Start the Loop */
             $precedent = "XXXXXX";
@@ -29,18 +30,15 @@ get_header();
 				the_post();
                 convertirTableau($tPropriété);
 				//print_r($tPropriété);
-				$session = $tPropriété['session'];
-                if($precedent != $session){
-					get_template_part( 'template-parts/content', 'cours' );
-					
-                }
-
-				endwhile;
-
-				endif; 
-				?>
+			if (in_array($tPropriété['session'], ['1', '2', '3','4','5','6']) ) : 
+					get_template_part( 'template-parts/content', 'cours' ); 
+			endif;	
+			
+			endwhile;?>
+				
+				
 			</section> <!-- fin section cours -->
-		 
+			<?php	endif; ?>
 	
 	</main><!-- #main -->
 
